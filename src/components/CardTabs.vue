@@ -1,0 +1,49 @@
+<script setup lang="ts">
+import type { TabsProps } from '@/types/common'
+
+const props = withDefaults(defineProps<TabsProps>(), {})
+</script>
+
+<template>
+  <view class="tabwarp">
+    <view v-for="item in props.itemList" :key="item.id" class="tabitem">
+      <view class="tabtext">
+        {{ item.name }}
+      </view>
+      <text class="tabicon iconfont" :class="item.icon" />
+    </view>
+    <slot />
+  </view>
+</template>
+
+<style lang="scss" scoped>
+.tabwarp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .tabitem{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 8px;
+    .tabtext{
+      font-family: PingFangSC, PingFang SC;
+      font-weight: 400;
+      font-size: 12px;
+      color: #111111;
+      line-height: 12px;
+      font-style: normal;
+    }
+    .tabicon{
+      font-size: 10px;
+      margin-left: 4px;
+      color: #DADADA;
+    }
+  }
+  .tabiconright{
+    color: #FF0057;
+    font-size: 18px;
+  }
+}
+</style>

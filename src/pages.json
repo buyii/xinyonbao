@@ -1,0 +1,89 @@
+{
+  "pages": [
+    {
+      "path": "pages/home/index",
+      "type": "home",
+      "layout": "tabbar",
+      "name": "home",
+      "style": {
+        "animationType": "none",
+        "animationDuration": 0,
+        "navigationBarTitleText": "home"
+      }
+    },
+    {
+      "path": "pages/index",
+      "type": "home",
+      "layout": "default",
+      "name": "home",
+      "style": {
+        "navigationBarTitleText": "home"
+      }
+    },
+    {
+      "path": "pages/hi",
+      "type": "page",
+      "layout": "default",
+      "name": "hi",
+      "style": {
+        "navigationBarTitleText": "hi"
+      }
+    },
+    {
+      "path": "pages/mine/index",
+      "type": "mine",
+      "layout": "tabbar",
+      "name": "mine",
+      "style": {
+        "navigationBarTitleText": "mine"
+      }
+    },
+    {
+      "path": "pages/rank/index",
+      "type": "rank",
+      "layout": "tabbar",
+      "name": "rank",
+      "style": {
+        "navigationBarTitleText": "rank"
+      }
+    },
+    {
+      "path": "pages/wisdom/index",
+      "type": "wisdom",
+      "layout": "tabbar",
+      "name": "wisdom",
+      "style": {
+        "navigationBarTitleText": "wisdom"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTitleText": "Wot-Demo",
+    "navigationBarTextStyle": "white",
+    "animationType": "none",
+    "animationDuration": 0,
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "custom": true,
+    "height": "0",
+    "color": "#999999",
+    "selectedColor": "#FF0057",
+    "list": [
+      {
+        "pagePath": "pages/home/index"
+      },
+      {
+        "pagePath": "pages/wisdom/index"
+      },
+      {
+        "pagePath": "pages/rank/index"
+      },
+      {
+        "pagePath": "pages/mine/index"
+      }
+    ]
+  },
+  "__esModule": true,
+  "subPackages": []
+}
