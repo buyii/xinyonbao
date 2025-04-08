@@ -30,6 +30,7 @@ export interface SelectionType {
 }
 
 export interface SelectionTabList {
+  isSingle: boolean // 是否单选
   label: string // 选择框的名称
   tabList: Item[]
 }

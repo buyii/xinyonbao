@@ -3,10 +3,8 @@ import { defineUniPages } from '@uni-helper/vite-plugin-uni-pages'
 export default defineUniPages({
   pages: [],
   globalStyle: {
-    navigationBarTitleText: 'Wot-Demo',
+    navigationBarTitleText: '星佣宝',
     navigationBarTextStyle: 'white',
-    animationType: 'none',
-    animationDuration: 0,
     navigationStyle: 'custom',
   },
   tabBar: {

@@ -10,7 +10,7 @@
 
 <style></style>
 
-<route type="mine" lang="json">
+<route lang="json">
 {
   "layout": "tabbar",
   "name": "mine",

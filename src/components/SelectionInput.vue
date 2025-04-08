@@ -41,36 +41,36 @@ export default {
 
 <style lang="scss" scoped>
 .inputwarp {
-  margin-bottom: 20px;
+  margin-bottom: 40rpx;
   .label{
     font-family: PingFangSC, PingFang SC;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 28rpx;
     color: #111111;
-    line-height: 14px;
+    line-height: 28rpx;
     font-style: normal;
-    margin-bottom: 16px;
+    margin-bottom: 32rpx;
   }
   .inputcontent{
     display: flex;
     align-items: center;
     justify-content: space-between;
     .inputbox{
-      width: 142px;
-      height: 60px;
+      width: 284rpx;
+      height: 120rpx;
       background: #FFFFFF;
-      border-radius: 16px;
-      border: 1px solid #EEEEEE;
+      border-radius: 32rpx;
+      border: 2rpx solid #EEEEEE;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-left: 20px;
+      padding-left: 40rpx;
       .sublabel{
         font-family: PingFangSC, PingFang SC;
         font-weight: 400;
-        font-size: 10px;
+        font-size: 20rpx;
         color: #DADADA;
-        line-height: 10px;
+        line-height: 20rpx;
         font-style: normal;
       }
       .wd-input::after{
@@ -79,15 +79,15 @@ export default {
       :deep(.placeholderClass){
         font-family: PingFangSC, PingFang SC;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 28rpx;
         color: #BABABA;
-        line-height: 14px;
+        line-height: 28rpx;
         font-style: normal;
       }
     }
     text{
-      font-size: 10px;
-      margin: 0 14px;
+      font-size: 20rpx;
+      margin: 0 28rpx;
     }
   }
 }

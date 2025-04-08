@@ -29,23 +29,23 @@ function changeTab(item: Item) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 13px;
+  padding-bottom: 26rpx;
   .tabitem{
     .tabtext{
       font-family: PingFangSC, PingFang SC;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 28rpx;
       color: #444444;
-      line-height: 16px;
+      line-height: 32rpx;
       font-style: normal;
     }
   }
   .active{
     .tabtext{
       font-weight: 500;
-      font-size: 16px;
+      font-size: 32rpx;
       color: #000000;
-      line-height: 16px;
+      line-height: 32rpx;
       font-style: normal;
     }
   }

@@ -10,7 +10,7 @@
 
 <style></style>
 
-<route type="wisdom" lang="json">
+<route lang="json">
 {
   "layout": "tabbar",
   "name": "wisdom",

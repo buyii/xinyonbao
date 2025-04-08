@@ -228,13 +228,19 @@ const themeVarscom = computed(() => {
   if (isFolded.value) {
     return {
       navbarColor: '#000',
+      navbarBackground: 'transparent',
     }
   }
   else {
     return {
       navbarColor: '#fff',
+      navbarBackground: 'transparent',
     }
   }
+})
+const statusBarHeight = computed(() => {
+  const systemInfo = uni.getSystemInfoSync()
+  return systemInfo.statusBarHeight
 })
 
 onPageScroll((e) => {
@@ -258,7 +264,7 @@ onPageScroll((e) => {
       @touchend="onTouchEnd"
     >
       <wd-navbar title="选品广场" safe-area-inset-top :placeholder="false" fixed :bordered="false" />
-      <view class="search-box">
+      <view class="search-box" :style="{ top: `${(statusBarHeight || 0) + 49}px` }">
         <wd-search hide-cancel custom-input-class="inputClass" placeholder-class="placeholderClass" placeholder="请搜索" />
       </view>
       <img class="img-banner" src="../../static/banner.png" alt="" :style="{ top: `${translateY}px`, transition: 'all 0.3s ease' }">
@@ -305,7 +311,6 @@ onPageScroll((e) => {
 }
 .search-box{
   position: fixed;
-  top: calc(var(--navbar-height) + 5px);
   left: 0;
   right: 0;
   padding: 0 20px;
@@ -379,9 +384,7 @@ onPageScroll((e) => {
   "layout": "tabbar",
   "name": "home",
   "style": {
-    "animationType": "none",
-    "animationDuration": 0,
-    "navigationBarTitleText": "home"
+    "navigationBarTitleText": "选品广场"
   }
 }
 </route>

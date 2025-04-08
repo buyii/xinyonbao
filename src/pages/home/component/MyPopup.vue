@@ -49,6 +49,10 @@ function close() {
   show.value = false
 }
 
+function onConfirm() {
+  show.value = false
+}
+
 // 暴露方法
 defineExpose({
   open,
@@ -56,12 +60,22 @@ defineExpose({
 })
 </script>
 
+<script lang="ts">
+export default {
+  options: {
+    addGlobalClass: true,
+    virtualHost: true,
+    styleIsolation: 'shared',
+  },
+}
+</script>
+
 <template>
   <view>
     <wd-popup
       v-model="show"
       position="bottom"
-      custom-style="height: 300px;border-radius: 16px 16px 0px 0px;overflow: hidden;" :z-index="999"
+      custom-style="height: 666px;border-radius: 16px 16px 0px 0px;overflow: hidden;" :z-index="999"
     >
       <view class="title">
         <view>综合筛选</view>
@@ -76,6 +90,11 @@ defineExpose({
           <SelectionTabs label="商品评分" :tab-list="selectionTabList" />
         </view>
       </view>
+      <view class="botbox">
+        <wd-button block @click="onConfirm">
+          确认
+        </wd-button>
+      </view>
     </wd-popup>
   </view>
 </template>
@@ -85,7 +104,7 @@ defineExpose({
   padding: 0 24px;
   position: relative;
   padding-top: 58px;
-  height: calc(100% - 58px);
+  height: calc(100% - 108px - env(safe-area-inset-bottom));
   overflow-y: auto;
 }
 .title{
@@ -108,6 +127,24 @@ defineExpose({
   padding: 0 24px;
   text{
     font-size: 14px;
+  }
+}
+.botbox{
+  padding-bottom: calc(6px + env(safe-area-inset-bottom));
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  :deep(.wd-button){
+    width: 90%;
+    height: 44px !important;
+    background: #FF0057 !important;
+    border-radius: 4px 16px 4px 16px !important;
   }
 }
 </style>

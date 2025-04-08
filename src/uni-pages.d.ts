@@ -5,8 +5,10 @@
 
 interface NavigateToOptions {
   url: "/pages/home/index" |
-       "/pages/index" |
        "/pages/hi" |
+       "/pages/index" |
+       "/pages/collectInfo/index" |
+       "/pages/details/index" |
        "/pages/mine/index" |
        "/pages/rank/index" |
        "/pages/wisdom/index";

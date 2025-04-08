@@ -2,8 +2,6 @@
 import type { ConfigProviderThemeVars } from 'wot-design-uni'
 
 const themeVars = reactive<ConfigProviderThemeVars>({
-  colorTheme: '#FF5454',
-  tabsNavLineBgColor: 'red',
   navbarColor: '#ffffff',
 })
 </script>

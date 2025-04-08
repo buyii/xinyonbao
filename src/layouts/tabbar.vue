@@ -9,7 +9,6 @@ const layoutStore = useLayoutStore()
 
 const themeVars = reactive<ConfigProviderThemeVars>({
   tabbarHeight: '60px',
-  navbarBackground: 'transparent',
 })
 
 const { activeTabbar, getTabbarItemValue, setTabbarItemActive, tabbarList } = useTabbar()
@@ -23,13 +22,13 @@ const themeVarscom = computed(() => {
   if (layoutStore.layoutStore.canSetColor) {
     return {
       ...themeVars,
-      navbarColor: layoutStore.layoutStore.navbarTColor,
+      // navbarColor: layoutStore.layoutStore.navbarTColor,
     }
   }
   else {
     return {
       ...themeVars,
-      navbarColor: '#000',
+      // navbarColor: '#000',
     }
   }
 })
@@ -91,7 +90,6 @@ export default {
 .iconfont {
   font-size: 24px;
   color:#999999;
-
 }
 .custom-box{
   :deep(.wd-tabbar-item__body-title){

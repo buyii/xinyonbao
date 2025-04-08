@@ -10,7 +10,7 @@
 
 <style></style>
 
-<route type="rank" lang="json">
+<route lang="json">
 {
   "layout": "tabbar",
   "name": "rank",

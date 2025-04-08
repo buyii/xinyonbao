@@ -10,7 +10,7 @@
 
 <style></style>
 
-<route type="home" lang="json">
+<route lang="json">
 {
   "layout": "default",
   "name": "home",

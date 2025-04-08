@@ -25,25 +25,26 @@ const props = withDefaults(defineProps<TabsProps>(), {})
     background-color: #fff;
     display: flex;
     align-items: center;
-    padding: 10px 12px;
-    border-radius: 8px;
+    justify-content: center;
+    width: 122rpx;
+    height: 64rpx;
+    border-radius: 16rpx;
     .tabtext{
       font-family: PingFangSC, PingFang SC;
       font-weight: 400;
-      font-size: 12px;
+      font-size: 24rpx;
       color: #111111;
-      line-height: 12px;
       font-style: normal;
     }
     .tabicon{
-      font-size: 10px;
-      margin-left: 4px;
+      font-size: 20rpx;
+      margin-left: 8rpx;
       color: #DADADA;
     }
   }
   .tabiconright{
     color: #FF0057;
-    font-size: 18px;
+    font-size: 32rpx;
   }
 }
 </style>

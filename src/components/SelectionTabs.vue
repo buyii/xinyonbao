@@ -1,15 +1,23 @@
 <script setup lang="ts">
 import type { SelectionTabList } from '@/types/common'
 
-const props = withDefaults(defineProps<SelectionTabList>(), {})
+const props = withDefaults(defineProps<SelectionTabList>(), {
+  isSingle: false, // 是否单选
+})
+
 const value = ref<number[]>([])
 function checkClick(id: number) {
-  const index = value.value.indexOf(id)
-  if (index === -1) {
-    value.value.push(id)
+  if (props.isSingle) {
+    value.value = [id]
   }
   else {
-    value.value.splice(index, 1)
+    const index = value.value.indexOf(id)
+    if (index === -1) {
+      value.value.push(id)
+    }
+    else {
+      value.value.splice(index, 1)
+    }
   }
 }
 </script>
@@ -39,32 +47,32 @@ export default {
 
 <style lang="scss" scoped>
 .inputwarp {
-  margin-bottom: 20px;
+  margin-bottom: 40rpx;
   .label{
     font-family: PingFangSC, PingFang SC;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 28rpx;
     color: #111111;
-    line-height: 14px;
+    line-height: 28rpx;
     font-style: normal;
-    margin-bottom: 16px;
+    margin-bottom: 32rpx;
   }
   .checkboxwarp{
     display: flex;
     flex-wrap: wrap;
-    gap: 8px; // 添加子元素之间的间距
+    gap: 16rpx; // 添加子元素之间的间距
     padding: 0;
    .my-checkbox{
-      width: calc(100% / 4 - 6px); // 每行最多 4 个元素，减去间距
-      height: 40px;
+      width: calc(100% / 4 - 12rpx); // 每行最多 4 个元素，减去间距
+      height: 80rpx;
       background: #F8F8F8;
-      border-radius: 8px;
-      padding: 0px;
+      border-radius: 16rpx;
+      padding: 0;
       text-align: center;
-      line-height: 40px;
+      line-height: 80rpx;
       font-family: PingFangSC, PingFang SC;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 28rpx;
       color: #444444;
       font-style: normal;
     }

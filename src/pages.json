@@ -6,18 +6,7 @@
       "layout": "tabbar",
       "name": "home",
       "style": {
-        "animationType": "none",
-        "animationDuration": 0,
-        "navigationBarTitleText": "home"
-      }
-    },
-    {
-      "path": "pages/index",
-      "type": "home",
-      "layout": "default",
-      "name": "home",
-      "style": {
-        "navigationBarTitleText": "home"
+        "navigationBarTitleText": "选品广场"
       }
     },
     {
@@ -30,8 +19,35 @@
       }
     },
     {
+      "path": "pages/index",
+      "type": "page",
+      "layout": "default",
+      "name": "home",
+      "style": {
+        "navigationBarTitleText": "home"
+      }
+    },
+    {
+      "path": "pages/collectInfo/index",
+      "type": "page",
+      "layout": "default",
+      "name": "collectInfo",
+      "style": {
+        "navigationBarTitleText": "领取信息填写"
+      }
+    },
+    {
+      "path": "pages/details/index",
+      "type": "page",
+      "layout": "default",
+      "name": "details",
+      "style": {
+        "navigationBarTitleText": "详情"
+      }
+    },
+    {
       "path": "pages/mine/index",
-      "type": "mine",
+      "type": "page",
       "layout": "tabbar",
       "name": "mine",
       "style": {
@@ -40,7 +56,7 @@
     },
     {
       "path": "pages/rank/index",
-      "type": "rank",
+      "type": "page",
       "layout": "tabbar",
       "name": "rank",
       "style": {
@@ -49,7 +65,7 @@
     },
     {
       "path": "pages/wisdom/index",
-      "type": "wisdom",
+      "type": "page",
       "layout": "tabbar",
       "name": "wisdom",
       "style": {
@@ -58,10 +74,8 @@
     }
   ],
   "globalStyle": {
-    "navigationBarTitleText": "Wot-Demo",
+    "navigationBarTitleText": "星佣宝",
     "navigationBarTextStyle": "white",
-    "animationType": "none",
-    "animationDuration": 0,
     "navigationStyle": "custom"
   },
   "tabBar": {
