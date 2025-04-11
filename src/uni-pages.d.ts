@@ -7,10 +7,15 @@ interface NavigateToOptions {
   url: "/pages/home/index" |
        "/pages/hi" |
        "/pages/index" |
+       "/pages/addressManage/index" |
+       "/pages/applySuccess/index" |
        "/pages/collectInfo/index" |
+       "/pages/custCar/index" |
        "/pages/details/index" |
        "/pages/mine/index" |
        "/pages/rank/index" |
+       "/pages/searchExperts/index" |
+       "/pages/storeDetails/index" |
        "/pages/wisdom/index";
 }
 interface RedirectToOptions extends NavigateToOptions {}

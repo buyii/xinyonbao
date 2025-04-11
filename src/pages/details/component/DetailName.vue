@@ -1,5 +1,11 @@
 <script setup lang="ts">
+import NotQualifyPopup from './NotQualifyPopup.vue'
 
+const notQualifyPopupRef = ref<ComponentPublicInstance<{ open: (num: number) => void }> | null>(null)
+
+function openPopup() {
+  notQualifyPopupRef.value?.open(1)
+}
 </script>
 
 <script lang="ts">
@@ -26,12 +32,13 @@ export default {
         <text class="iconfont icon-share" />
         <text>分享海报</text>
       </view>
-      <view>
+      <view @click="openPopup">
         <text class="iconfont icon-cost" />
         <text>成本购样</text>
       </view>
     </view>
   </view>
+  <NotQualifyPopup ref="notQualifyPopupRef" />
 </template>
 
 <style lang="scss" scoped>

@@ -1,21 +1,28 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useLayoutStore } from '@/stores'
+
+const { layoutStore } = useLayoutStore()
+const statusBarHeight = computed(() => {
+  return layoutStore.statusBarHeight
+})
+function handleClickLeft() {
+  uni.navigateBack()
+}
+</script>
 
 <template>
-  <view class="px-3 py-20 text-center">
-    <view class="mb-4 text-xl text-gray-9">
-      hi！你好。
-    </view>
+  <wd-navbar title="店铺详情" safe-area-inset-top left-arrow fixed :bordered="false" @click-left="handleClickLeft" />
+  <view :style="{ paddingTop: `${(statusBarHeight || 0) + 44}px` }">
+    店铺详情
   </view>
 </template>
-
-<style></style>
 
 <route lang="json">
 {
   "layout": "default",
-  "name": "home",
+  "name": "index",
   "style": {
-    "navigationBarTitleText": "home"
+    "navigationBarTitleText": "index"
   }
 }
 </route>

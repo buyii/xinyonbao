@@ -1,8 +1,12 @@
-// src/store/useCountStore.ts
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 // const initState = { navbarTColor: ref('#000') }
+
+const statusBarHeight = computed(() => {
+  const systemInfo = uni.getSystemInfoSync()
+  return systemInfo.statusBarHeight ? systemInfo.statusBarHeight : 0
+})
 
 export const useLayoutStore = defineStore(
   'layout',
@@ -11,6 +15,8 @@ export const useLayoutStore = defineStore(
       navbarTColor: ref('#fff'),
       // 是否可以设置颜色
       canSetColor: ref(false),
+
+      statusBarHeight: ref(statusBarHeight),
     })
 
     const setLayoutStore = (val: any) => {

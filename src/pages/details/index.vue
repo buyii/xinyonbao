@@ -10,6 +10,7 @@ import DetailFoot from './component/DetailFoot.vue'
 const pageScrollTop = ref(0)
 const themeVars = reactive({
   navbarBackground: 'transparent',
+  navbarColor: '#ffffff',
   colorBg: '#F8F8F8',
 })
 
@@ -24,7 +25,6 @@ onMounted(() => {
 })
 
 onPageScroll((e) => {
-  console.log(e.scrollTop, 'scrollTop')
   pageScrollTop.value = e.scrollTop
 })
 </script>

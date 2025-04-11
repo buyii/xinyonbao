@@ -66,8 +66,8 @@ export default {
     <view class="custom-box">
       <wd-tabbar
         :model-value="activeTabbar.name"
-        placeholder bordered safe-area-inset-bottom
-        fixed active-color="#FF0057"
+
+        bordered safe-area-inset-bottom placeholder fixed active-color="#FF0057"
         inactive-color="#999999"
         @change="handleTabbarChange"
       >
@@ -88,16 +88,14 @@ export default {
 
 <style lang="scss" scoped>
 .iconfont {
-  font-size: 24px;
+  font-size: 48rpx;
   color:#999999;
 }
 .custom-box{
   :deep(.wd-tabbar-item__body-title){
+    font-family: PingFangSC, PingFang SC;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 12px;
-    text-align: left;
-    font-style: normal;
+    font-size: 24rpx;
     margin-top: 7px !important;
   }
 }

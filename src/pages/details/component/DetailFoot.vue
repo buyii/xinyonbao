@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ApplyPopup from './ApplyPopup.vue'
+import NotQualifyPopup from './NotQualifyPopup.vue'
 
 const props = defineProps({
   pageScrollTop: {
@@ -11,9 +12,12 @@ const props = defineProps({
 const isSelection = ref(false)
 
 const applyPopupRef = ref<ComponentPublicInstance<{ open: () => void }> | null>(null)
+const notQualifyPopupRef = ref<ComponentPublicInstance<{ open: (num: number) => void }> | null>(null)
 
 function showPopup() {
-  applyPopupRef.value?.open()
+  // applyPopupRef.value?.open() // 可以领样时的弹窗
+
+  notQualifyPopupRef.value?.open(0) // 不能领样时的弹窗
 }
 
 function onSelection() {
@@ -57,6 +61,7 @@ export default {
     </view>
   </view>
   <ApplyPopup ref="applyPopupRef" />
+  <NotQualifyPopup ref="notQualifyPopupRef" />
 </template>
 
 <style lang="scss" scoped>
@@ -114,7 +119,6 @@ export default {
     gap: 16rpx;
     padding-bottom: env(safe-area-inset-bottom);
     view{
-      flex: 1;
       font-family: PingFangSC, PingFang SC;
       font-weight: 500;
       font-size: 28rpx;
@@ -137,6 +141,13 @@ export default {
         text-align: center;
         font-style: normal;
         border-radius: 32rpx;
+        min-width: auto !important;
+        padding: 0px;
+      }
+      .wd-button.is-medium{
+        .wd-button__content{
+          min-width: auto !important;
+        }
       }
       .wd-button:nth-child(1){
         background-color: #4B00FC;

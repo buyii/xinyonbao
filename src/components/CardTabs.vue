@@ -26,7 +26,7 @@ const props = withDefaults(defineProps<TabsProps>(), {})
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 122rpx;
+    padding: 0 24rpx;
     height: 64rpx;
     border-radius: 16rpx;
     .tabtext{

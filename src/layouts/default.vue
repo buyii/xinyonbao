@@ -2,7 +2,7 @@
 import type { ConfigProviderThemeVars } from 'wot-design-uni'
 
 const themeVars = reactive<ConfigProviderThemeVars>({
-  navbarColor: '#ffffff',
+  // navbarColor: '#ffffff',
 })
 </script>
 
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <wd-config-provider :theme-vars="themeVars" custom-style="background-color: #f5f5f5;min-height: 100vh">
+  <wd-config-provider :theme-vars="themeVars" custom-style="background-color: #f5f5f5;height: 100vh">
     <slot />
     <wd-notify />
     <wd-toast />

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Commodity from './component/Commodity.vue'
+import { useLayoutStore } from '@/stores'
 
+const { layoutStore } = useLayoutStore()
 const value = ref<string>('')
 const showText = ref<boolean>(false)
 
@@ -19,12 +21,21 @@ function onTextBlur(val: any) {
     showText.value = false
   }
 }
+function toAddress() {
+  uni.navigateTo({
+    url: `/pages/addressManage/index`,
+  })
+}
+function toExperts() {
+  uni.navigateTo({
+    url: `/pages/searchExperts/index`,
+  })
+}
 function onConfirm() {
 
 }
 const statusBarHeight = computed(() => {
-  const systemInfo = uni.getSystemInfoSync()
-  return systemInfo.statusBarHeight
+  return layoutStore.statusBarHeight
 })
 </script>
 
@@ -42,7 +53,7 @@ const statusBarHeight = computed(() => {
           <image src="../../static/svg/bubble.svg" />
         </view>
       </view>
-      <view class="add-box">
+      <view class="add-box" @click="toAddress">
         <view><wd-icon name="add1" size="30rpx" /></view>
         <view class="add-text">
           新增地址
@@ -56,7 +67,7 @@ const statusBarHeight = computed(() => {
       <view class="card-label">
         选择领样达人
       </view>
-      <view class="add-box add-box2">
+      <view class="add-box add-box2" @click="toExperts">
         <view><wd-icon name="add1" size="30rpx" /></view>
         <view class="add-text">
           添加达人
@@ -83,11 +94,7 @@ const statusBarHeight = computed(() => {
         />
       </view>
     </view>
-    <view class="botbox">
-      <wd-button block @click="onConfirm">
-        确认
-      </wd-button>
-    </view>
+    <FootButton label="确认" fixed @confirm="onConfirm" />
   </wd-config-provider>
 </template>
 

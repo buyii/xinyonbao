@@ -8,8 +8,6 @@
   </view>
 </template>
 
-<style></style>
-
 <route lang="json">
 {
   "layout": "tabbar",

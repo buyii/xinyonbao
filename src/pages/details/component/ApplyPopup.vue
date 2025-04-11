@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Item, TabsProps } from '@/types/common'
+import type { Item } from '@/types/common'
 
 // const props = withDefaults(defineProps<TabsProps>(), {})
 
@@ -34,6 +34,9 @@ function close() {
 }
 
 function onConfirm() {
+  uni.navigateTo({
+    url: `/pages/collectInfo/index`,
+  })
   show.value = false
 }
 
@@ -88,11 +91,7 @@ export default {
           <SelectionTabs label="规格" :is-single="true" :tab-list="selectionTabList" />
         </view>
       </view>
-      <view class="botbox">
-        <wd-button block @click="onConfirm">
-          确认
-        </wd-button>
-      </view>
+      <FootButton label="确认" @confirm="onConfirm" />
     </wd-popup>
   </view>
 </template>
@@ -184,24 +183,6 @@ export default {
         }
       }
     }
-  }
-}
-.botbox{
-  padding-bottom: calc(12rpx + env(safe-area-inset-bottom));
-  background-color: #fff;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  :deep(.wd-button){
-    width: 90%;
-    height: 88rpx !important;
-    background: #FF0057 !important;
-    border-radius: 8rpx 32rpx!important;
   }
 }
 </style>

@@ -17,3 +17,4 @@ export default store
 export * from './user'
 export * from './count'
 export * from './layout'
+export * from './chatStore'

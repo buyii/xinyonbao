@@ -102,6 +102,7 @@ function toDetail(item: ProductItem) {
   justify-content: space-between;
   background: transparent;
   padding-top: 20rpx;
+  padding-bottom: 16rpx;
   gap: 10px; // 增加子元素之间的间隔
   .product-card{
     width: calc(50% - 5px);

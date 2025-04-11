@@ -22,9 +22,27 @@
       "path": "pages/index",
       "type": "page",
       "layout": "default",
-      "name": "home",
+      "name": "index",
       "style": {
-        "navigationBarTitleText": "home"
+        "navigationBarTitleText": "index"
+      }
+    },
+    {
+      "path": "pages/addressManage/index",
+      "type": "page",
+      "layout": "default",
+      "name": "address",
+      "style": {
+        "navigationBarTitleText": "address"
+      }
+    },
+    {
+      "path": "pages/applySuccess/index",
+      "type": "page",
+      "layout": "default",
+      "name": "applySuccess",
+      "style": {
+        "navigationBarTitleText": "申样成功"
       }
     },
     {
@@ -34,6 +52,15 @@
       "name": "collectInfo",
       "style": {
         "navigationBarTitleText": "领取信息填写"
+      }
+    },
+    {
+      "path": "pages/custCar/index",
+      "type": "page",
+      "layout": "default",
+      "name": "address",
+      "style": {
+        "navigationBarTitleText": "address"
       }
     },
     {
@@ -61,6 +88,23 @@
       "name": "rank",
       "style": {
         "navigationBarTitleText": "rank"
+      }
+    },
+    {
+      "path": "pages/searchExperts/index",
+      "type": "page",
+      "layout": "default",
+      "name": "searchexperts",
+      "style": {
+        "navigationBarTitleText": "搜索"
+      }
+    },
+    {
+      "path": "pages/storeDetails/index",
+      "type": "page",
+      "name": "storeDetails",
+      "style": {
+        "navigationBarTitleText": "storeDetails"
       }
     },
     {

@@ -12,9 +12,9 @@ export default {
   },
   // onReady() {
   //   // 这里的 686 对应 css .charts 的 width
-  //   this.cWidth = uni.upx2px(686)
+  //   this.cWidth = uni.rpx2px(686)
   //   // 这里的 450 对应 css .charts 的 height
-  //   this.cHeight = uni.upx2px(450)
+  //   this.cHeight = uni.rpx2px(450)
   //   this.getServerData()
   // },
   methods: {
@@ -36,9 +36,9 @@ export default {
     },
     drawCharts(id, data) {
       // 这里的 686 对应 css .charts 的 width
-      this.cWidth = uni.upx2px(686)
+      this.cWidth = uni.rpx2px(686)
       // 这里的 450 对应 css .charts 的 height
-      this.cHeight = uni.upx2px(450)
+      this.cHeight = uni.rpx2px(450)
       console.log('this.cWidth', this.cWidth)
       console.log('this.cHeight', this.cHeight)
       const ctx = uni.createCanvasContext(id, this)
